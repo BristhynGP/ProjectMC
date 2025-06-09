@@ -39,7 +39,7 @@ ProjectMC/
 │   ├── migrations/            → Migraciones de base de datos
 │   ├── templates/             → Plantillas HTML (interfaz de usuario)
 │   ├── static/                → Archivos estáticos (CSS, JS, imágenes)
-│   ├── models.py            → Definición de modelos(cultivos, usuarios)
+│   ├── models.py            → Definición de modelos(usuarios, post, relacion)
 │   ├── views.py               → Lógica de las vistas (controladores)
 │   ├── urls.py                → Rutas locales de la app
 │   └── admin.py               → Configuración de modelos en panel de administración
