@@ -20,7 +20,13 @@
             <p class="text-primary">Producto físico</p>
         {% endif %}
 
+        <a href="{% url 'profile' post.user.username %}" class="btn btn-outline-primary mt-3">
+        Ver perfil del vendedor
+        </a>
+
+
         <hr>
+
         <a href="{% url 'feed' %}" class="btn btn-outline-secondary mt-3">Volver a productos</a>
     </div>
 </div>
