@@ -32,6 +32,8 @@ Este proyecto está diseñado para implementarse en fases, priorizando el desarr
 
 ```
 ProjectMC/
+├── settings.py                → Donde se hacen las configuraciones de la aplicacion
+├── urls.py                    → Donde se referencia la aplicacion con sus funcionalidades
 ├── manage.py                  → Comando principal del proyecto
 ├── db.sqlite3                 → Base de datos local por defecto
 ├── requirements.txt           → Lista de dependencias necesarias
