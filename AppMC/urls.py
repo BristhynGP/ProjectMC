@@ -8,7 +8,7 @@ from django.contrib.auth.views import LoginView, LogoutView
 urlpatterns = [
     path('', views.index, name='index'),
     path('feed/', views.feed, name='feed'),
-    path('post/<int:post_id>/', views.post_detail, name='post_detail'),
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
     path('profile/', views.profile, name='profile'),
     path('perfil/editar/', edit_profile, name='editar_perfil'),
     path('perfil/editarimagen/', profileimage, name='editar_imagen'),

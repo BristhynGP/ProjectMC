@@ -1,19 +1,27 @@
 {% extends 'social/layout.html' %}
 {% load humanize %}
 {% load static %}
+
 {% block content %}
+<div class="container mt-5">
+    <div class="post-detail shadow p-4 rounded bg-white">
+        <h1 class="text-success text-capitalize">{{ post.name }}</h1>
+        <hr>
+        <p>{{ post.description }}</p>
+        <p><strong>Precio:</strong> ${{ post.price|intcomma }}</p>
+        
+        {% if post.image %}
+            <img src="{{ post.image.url }}" alt="{{ post.name }}" class="img-fluid d-block mx-auto mt-3">
+        {% endif %}
 
+        {% if post.digital %}
+            <p class="text-info">Producto digital</p>
+        {% else %}
+            <p class="text-primary">Producto físico</p>
+        {% endif %}
 
-<div class="post-detail">
-    <h1>{{ post.name }}</h1>
-    <p>{{ post.description }}</p>
-    <p>Precio: ${{ post.price }}</p>
-    {% if post.digital %}
-      <p>Producto digital</p>
-    {% else %}
-      <p>Producto físico</p>
-    {% endif %}
-    <img src="{{ post.image.url }}" alt="{{ post.name }}">
-  </div>
-
-{% endblock content %}
+        <hr>
+        <a href="{% url 'feed' %}" class="btn btn-outline-secondary mt-3">Volver a productos</a>
+    </div>
+</div>
+{% endblock %}

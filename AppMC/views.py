@@ -43,9 +43,9 @@ def post(request):
         form = PostForm()
     return render(request, 'social/post.html', {'form' : form})
 
-def post_detail(request, post_id):
-    post = get_object_or_404(Post, post_id=post_id)
-    return render(request, 'post_detail.html', {'post': post})
+def post_detail(request, pk):
+    post = get_object_or_404(Post, id=pk)
+    return render(request, 'social/post_detail.html', {'post': post})
 
 def profile(request, username=None):
     current_user = request.user
